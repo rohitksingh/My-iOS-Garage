@@ -8,15 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var emailValue = ""
+    @State var passwordValue = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        VStack{
+            TextField("Email", text: $emailValue)
+                        .textFieldStyle(.roundedBorder)
+                        .padding(40)
+            TextField("Password", text: $passwordValue)
+                .textFieldStyle(.roundedBorder)
+                .padding(40)
         }
-        .padding()
+        .frame(maxWidth: .infinity, maxHeight : .infinity)
+        .background(Color.black)
+
     }
+    
+    
 }
 
 #Preview {
