@@ -15,12 +15,20 @@ struct ContentView: View {
     var body: some View {
         
         VStack{
+            
             TextField("Email", text: $emailValue)
-                        .textFieldStyle(.roundedBorder)
-                        .padding(40)
+                            .padding()
+                            .background(Color.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                            .padding(.horizontal, 40)
+        
             TextField("Password", text: $passwordValue)
-                .textFieldStyle(.roundedBorder)
-                .padding(40)
+                            .padding()
+                            .background(Color.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                            .padding(.horizontal, 40)
+
+            
         }
         .frame(maxWidth: .infinity, maxHeight : .infinity)
         .background(Color.black)
