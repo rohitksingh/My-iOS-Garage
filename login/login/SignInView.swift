@@ -18,40 +18,43 @@ struct SignInView: View {
     
     var body: some View {
         
-        VStack{
+        NavigationStack{
+            VStack{
+                
+                TextField("Email", text: $emailValue)
+                                .padding()
+                                .background(Color.white)
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                                .padding(.horizontal, 40)
             
-            TextField("Email", text: $emailValue)
-                            .padding()
-                            .background(Color.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 8))
-                            .padding(.horizontal, 40)
-        
-            TextField("Password", text: $passwordValue)
-                            .padding()
-                            .background(Color.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 8))
-                            .padding(.horizontal, 40)
-            
-            
-           Button("Sign in", action: signup)
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(Color.red)
-                .foregroundStyle(Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-                .padding(.horizontal, 40)
-            
-            Text("Don't have an account? Sign up")
-                .padding()
-                .frame(maxWidth: .infinity)
-                .foregroundColor(.white)
-                            
+                TextField("Password", text: $passwordValue)
+                                .padding()
+                                .background(Color.white)
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                                .padding(.horizontal, 40)
+                
+                
+               Button("Sign in", action: signup)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.red)
+                    .foregroundStyle(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                    .padding(.horizontal, 40)
+                
+                Text("Don't have an account? Sign up")
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .foregroundColor(.white)
+                                
 
-            
+                
+            }
+            .frame(maxWidth: .infinity, maxHeight : .infinity)
+            .background(Color.black)
         }
-        .frame(maxWidth: .infinity, maxHeight : .infinity)
-        .background(Color.black)
-
+        
+        
     }
     
     func signup(){
