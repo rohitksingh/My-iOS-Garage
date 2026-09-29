@@ -42,7 +42,10 @@ struct SignInView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                     .padding(.horizontal, 40)
                 
-                Text("Don't have an account? Sign up")
+    
+                
+                NavigationLink("Don't have an account? Sign up", destination:
+                    SignUpView())
                     .padding()
                     .frame(maxWidth: .infinity)
                     .foregroundColor(.white)
