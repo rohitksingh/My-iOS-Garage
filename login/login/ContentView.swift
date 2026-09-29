@@ -27,12 +27,25 @@ struct ContentView: View {
                             .background(Color.white)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                             .padding(.horizontal, 40)
+            
+           Button("Sign up", action: signup)
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.red)
+                .foregroundStyle(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .padding(.horizontal, 40)
+                
 
             
         }
         .frame(maxWidth: .infinity, maxHeight : .infinity)
         .background(Color.black)
 
+    }
+    
+    func signup(){
+        
     }
     
     
