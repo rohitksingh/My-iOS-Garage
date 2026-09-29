@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import os
 
 struct ContentView: View {
     
     @State var emailValue = ""
     @State var passwordValue = ""
+    
+    private let logger = Logger(subsystem: "com.rohit.login", category: "ContentView")
+    
     
     var body: some View {
         
@@ -45,7 +49,7 @@ struct ContentView: View {
     }
     
     func signup(){
-        
+        logger.info("Sign up clicked")
     }
     
     
