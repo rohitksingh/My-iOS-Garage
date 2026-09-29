@@ -43,13 +43,15 @@ struct SignInView: View {
                     .padding(.horizontal, 40)
                 
     
+                HStack{
+                    Text("Don't have an account?")
+                        .foregroundColor(.white)
+                    NavigationLink("Sign up", destination:
+                        SignUpView())
+                        
+                }
+                .padding()
                 
-                NavigationLink("Don't have an account? Sign up", destination:
-                    SignUpView())
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(.white)
-                                
 
                 
             }
