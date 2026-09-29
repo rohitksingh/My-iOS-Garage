@@ -32,14 +32,20 @@ struct ContentView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                             .padding(.horizontal, 40)
             
-           Button("Sign up", action: signup)
+            
+           Button("Sign in", action: signup)
                 .frame(maxWidth: .infinity)
                 .padding()
                 .background(Color.red)
                 .foregroundStyle(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .padding(.horizontal, 40)
-                
+            
+            Text("Don't have an account? Sign up")
+                .padding()
+                .frame(maxWidth: .infinity)
+                .foregroundColor(.white)
+                            
 
             
         }
